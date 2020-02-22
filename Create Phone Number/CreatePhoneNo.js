@@ -22,6 +22,18 @@
  *     2. isNaN(23) == false => the result is a no.
  */
 
+// SIMPLE solution
+function createPhoneNumber(numbers) {
+    var format = "(xxx) xxx-xxxx";
+
+    for (var i = 0; i < numbers.length; i++) {
+        format = format.replace('x', numbers[i]);
+    }
+
+    return format;
+}
+
+
 function createPhoneNumber(numbers) {
 
     const isInputValid = isInputArrayValid(numbers);
